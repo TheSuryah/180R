@@ -181,7 +181,7 @@ body {
   }
 
 .text span {
-  font-size: 2.8vw;
+  font-size: 2.5vw;
   animation-name: presents;
   animation-duration: 1s;
 }
@@ -213,13 +213,13 @@ body {
 }
 
 @-webkit-keyframes presents {
-  from {font-size: 1.8vw; opacity: 0;}
-  to {font-size: 2.8vw; opacity: 1;}
+  from {font-size: 1.5vw; opacity: 0;}
+  to {font-size: 2.5vw; opacity: 1;}
   }
 
 @keyframes presents {
-  from {font-size: 1.8vw; opacity: 0;}
-  to {font-size: 2.8vw; opacity: 1;}
+  from {font-size: 1.5vw; opacity: 0;}
+  to {font-size: 2.5vw; opacity: 1;}
 }
 
 @-webkit-keyframes register {
