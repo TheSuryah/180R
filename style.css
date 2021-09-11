@@ -189,14 +189,14 @@ body {
 .register {
     color: #f2f2f2;
     background-color: #00b344;
-    width: 25vw;
+    width: 20vw;
     font-weight: bold;
     padding: 1.67vh;
     font-size: 2.25vw;
     text-decoration: none;
     position: absolute;
     bottom: 20vh;
-    left: 37.5vw;
+    left: 40vw;
     text-align: center;
     animation-name: register;
     animation-duration: 1.5s;
