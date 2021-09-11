@@ -11,7 +11,7 @@ function scrollFunction() {
   } else {
     document.getElementById("mobile-navbar").style.backgroundColor = "transparent";
   }
-  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("glimpse").style.opacity = "1";
   } else {
     document.getElementById("glimpse").style.opacity = "0";
