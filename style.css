@@ -155,8 +155,8 @@ color: white;
   content: ' ';
   z-index: 0;
   backface-visibility: hidden;
-  background: #3452ff;
-  background: linear-gradient(rgba(0,0,0,0) -50%,rgba(0,0,0,1) 100%);
+  background: #000000;
+  background: linear-gradient(rgba(0,0,0,1) -20%,rgba(0,0,0,0) 20%, rgba(0,0,0,0) 30%, rgba(0,0,0,1) 100%);
 }
 
 #video-slides video {
