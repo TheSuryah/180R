@@ -575,12 +575,12 @@ font-size: 10vh;
 }
 
 @-webkit-keyframes about-navbar {
-  from {top: -11vh;}
+  from {top: -12vh;}
   to {top: 0;}
 }
   
 @keyframes about-navbar {
-  from {top: -11vh;}
+  from {top: -12vh;}
   to {top: 0;}
 }
 
