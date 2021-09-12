@@ -610,7 +610,6 @@ font-size: 10vh;
 }
 
 @media screen and (max-width: 800px) {
-
   .collapsible {
     cursor: pointer;
     padding: 2vh 0;
