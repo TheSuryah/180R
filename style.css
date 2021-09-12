@@ -108,7 +108,7 @@ color: white;
 padding: 0%;
 margin-right: 4.5vw;
 position: relative;
-top: 2.5vh;
+top: 2.25vh;
 }
 
 #mobile-navbar a {
@@ -138,7 +138,7 @@ color: white;
 padding: 0%;
 margin: 0;
 position: relative;
-top: 2.5vh;
+top: 2.25vh;
 }
 
 #mobile-navbar span {
@@ -153,7 +153,7 @@ color: white;
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0);
   overflow: hidden;
 }
 
@@ -164,7 +164,7 @@ color: white;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.3;
+  opacity: 0.7;
 }
 
 .text {
@@ -184,6 +184,11 @@ color: white;
 font-size: 2.5vw;
 animation-name: presents;
 animation-duration: 1s;
+}
+
+.text a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .register {
@@ -360,33 +365,281 @@ font-size: 10vh;
 }
 
 #glimpse {
-margin-top: 5vh;
-margin-left: 5vh;
-transition: 1s;
+  margin-top: 3vw;
+  transition: 0.5s;
+}
+
+#glimpse a {
+  text-decoration: none;
+  color: #000000;
 }
 
 #glimpse span {
-font-size: 5vh;
+  margin-left: 3vw;
+  font-size: 3vw;
 }
 
-#glimpse iframe {
-margin-top: 5vh;
+@media screen and (max-width: 500px) {
+  #glimpse span {
+    font-size: 5vw;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.cards > div {
+  background-color: #ffffff;
+  width: 20vw;
+  margin: 2.5vw;
+  box-shadow: 0 0 8px #000000;
+}
+
+.thumbnail {
+  width: 20vw;
+  height: 11.25vw;
+}
+
+.card-title {
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+.card-details {
+  font-size: 2.5vh;
+}
+
+@media screen and (max-width: 600px) {
+  .cards {
+    flex-flow: row wrap;
+  }
+  
+  .cards > div {
+    width: 45vw;
+    text-align: center;
+    font-size: 2vw;
+    margin: 2vw;
+    box-shadow: 0 0 4px #000000;
+  }
+
+  .thumbnail {
+    width: 45vw;
+    height: 25.3125vw;
+  }
+  .card-title {
+    font-size: 3vw;
+    font-weight: bold;
+  }
+  
+  .card-details {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .cards {
+    flex-flow: column;
+  }
+  
+  .cards > div {
+    width: 90vw;
+    text-align: center;
+    font-size: 2vw;
+    margin: 4vw;
+    box-shadow: 0 0 4px #000000;
+  }
+
+  .thumbnail {
+    width: 90vw;
+    height: 50.625vw;
+  }
+  .card-title {
+    font-size: 3vw;
+    font-weight: bold;
+  }
+  
+  .card-details {
+    font-size: 2.5vw;
+  }
 }
 
 #contact {
-background-color: #000000;
-margin-top: 5vh;
-padding-top: 5vh;
-padding-bottom: 5vh;
-font-size: 2.5vh;
+  background-color: #000000;
+  margin-top: 5vh;
+  padding: 5vh;
+  font-size: 2.5vh;
+  position: relative;
+  top: 10vh;
 }
-
+  
 #contact span {
-color: #acacac;
-margin-left: 5vh;
+  color: #acacac;
+}
+  
+#contact p {
+  color: white;
 }
 
-#contact p {
-color: white;
-margin-left: 5vh;
+@media screen and (max-width: 600px) {
+  #contact {
+    padding: 5vw;
+    font-size: 3.5vw;
+  }
+}
+
+/*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/
+
+#about-navbar {
+  background-color: #222222;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  animation-name: about-navbar;
+  animation-duration: 1s;
+}
+
+@media screen and (max-width: 1200px) {
+  #about-navbar {
+    display: none;
+  }
+}
+
+#about-navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 4.125vh 1.265vw;
+  text-decoration: none;
+  font-size: 1.547vw;
+}
+
+#about-navbar img {
+  height: 11vh;
+  float: left;
+  margin-left: 8vh;
+}
+
+#about-navbar p {
+  font-size: 6vh;
+  float: left;
+  color: white;
+  padding: 0%;
+  margin-right: 4.5vw;
+  position: relative;
+  top: 2.5vh;
+}
+
+#about180r {
+  position: relative;
+  top: 12vh;
+  padding: 2vw;
+}
+
+.collapsible {
+  background-color: #3d3d3d;
+  color: white;
+  cursor: pointer;
+  padding: 2vh 0;
+  width: 65vw;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 4vh;
+  margin-top: 1vh;
+  white-space: nowrap;
+  animation-name: collapsible;
+}
+
+.active, .collapsible:hover {
+  background-color: #202020;
+}
+
+.content {
+  padding: 0 1vh;
+  max-height: 0;
+  width: 65vw;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+  animation-name: collapsible;
+}
+
+.collapsible span {
+  margin-left: 2vh;
+  animation-name: about-content;
+}
+
+@-webkit-keyframes about-navbar {
+  from {top: -11vh;}
+  to {top: 0;}
+}
+  
+@keyframes about-navbar {
+  from {top: -11vh;}
+  to {top: 0;}
+}
+
+@-webkit-keyframes collapsible {
+  from {width: 0}
+  to {width: 65vw}
+}
+  
+@keyframes collapsible {
+  from {width: 0}
+  to {width: 65vw}
+}
+
+@-webkit-keyframes about-content {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes about-content {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.content p {
+  padding: 3vh;
+  font-size: 3vh;
+}
+
+@media screen and (max-width: 800px) {
+
+  .collapsible {
+    cursor: pointer;
+    padding: 2vh 0;
+    width: 96vw;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 3.5vw;
+    margin-top: 1vw;
+  }
+  
+  .content {
+    padding: 0 1vw;
+    width: 96vw;
+    max-height: 0;
+  }
+  
+  .content p {
+    padding: 3vw;
+    font-size: 3.5vw;
+  }
+
+  @-webkit-keyframes collapsible {
+    from {width: 0}
+    to {width: 96vw}
+  }
+    
+  @keyframes collapsible {
+    from {width: 0}
+    to {width: 96vw}
+  }
 }
