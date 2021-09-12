@@ -326,6 +326,7 @@ z-index: 3;
 top: 0;
 right: 0;
 background-color: #111111;
+white-space: nowrap;
 overflow-x: hidden;
 transition: 0.5s;
 -ms-overflow-style: none;  /* IE and Edge */
