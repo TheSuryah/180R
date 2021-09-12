@@ -29,7 +29,7 @@ scrollbar-width: none;  /* Firefox */
 #mobile-navbar {
 background-color: transparent;
 position: fixed;
-z-index: 2;
+z-index: 1;
 top: 0;
 width: 100%;
 display: block;
@@ -41,7 +41,7 @@ animation-duration: 1s;
 #navbar {
 background-color: transparent;
 position: fixed;
-z-index: 2;
+z-index: 1;
 top: 0;
 width: 100%;
 display: block;
@@ -69,17 +69,6 @@ animation-duration: 1s;
           user-select: none; /* Non-prefixed version, currently
                                 supported by Chrome and Opera */
 }
-
-#mobile-navbar img {
--webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-   -khtml-user-select: none; /* Konqueror HTML */
-     -moz-user-select: none; /* Firefox */
-      -ms-user-select: none; /* Internet Explorer/Edge */
-          user-select: none; /* Non-prefixed version, currently
-                                supported by Chrome and Opera */
-}
-
 
 #navbar a {
 float: left;
@@ -126,7 +115,7 @@ color: #dfdfdf;
 }
 
 #mobile-navbar img {
-height: 10vh;
+height: 11vh;
 float: left;
 margin-left: 2vh;
 }
@@ -196,7 +185,7 @@ animation-duration: 1s;
   background-color: #00b344;
   width: 20vw;
   font-weight: bold;
-  padding: 1.67vh;
+  padding: 1.67vh 0;
   font-size: 2.25vw;
   text-decoration: none;
   position: absolute;
@@ -205,6 +194,8 @@ animation-duration: 1s;
   text-align: center;
   animation-name: register;
   animation-duration: 1.5s;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 @-webkit-keyframes text {
@@ -228,13 +219,13 @@ to {font-size: 2.5vw; opacity: 1;}
 }
 
 @-webkit-keyframes register {
-from {font-size: 1.25vw; opacity: 0;}
-to {font-size: 2.25vw; opacity: 1;}
+  from {width: 0;}
+  to {width: 20vw;}
 }
-
+  
 @keyframes register {
-from {font-size: 1.25vw; opacity: 0;}
-to {font-size: 2.25vw; opacity: 1;}
+  from {width: 0;}
+  to {width: 20vw;}
 }
 
 @-webkit-keyframes navbar {
@@ -284,13 +275,13 @@ to {top: 0; opacity: 1;}
   }
 
   @-webkit-keyframes register {
-    from {font-size: 2vw; opacity: 0;}
-    to {font-size: 3vw; opacity: 1;}
+    from {width: 0;}
+    to {width: 30vw;}
   }
     
   @keyframes register {
-    from {font-size: 2vw; opacity: 0;}
-    to {font-size: 3vw; opacity: 1;}
+    from {width: 0;}
+    to {width: 30vw;}
   }
 }
 
@@ -322,7 +313,7 @@ to {top: 0; opacity: 1;}
 height: 100%;
 width: 0;
 position: fixed;
-z-index: 3;
+z-index: 2;
 top: 0;
 right: 0;
 background-color: #111111;
@@ -390,27 +381,32 @@ font-size: 10vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-left: 1.5vw;
 }
 
 .cards > div {
   background-color: #ffffff;
-  width: 20vw;
-  margin: 2.5vw;
+  width: 22vw;
+  margin: 1vw;
   box-shadow: 0 0 8px #000000;
 }
 
 .thumbnail {
-  width: 20vw;
-  height: 11.25vw;
+  width: 22vw;
+  height: 12.375vw;
 }
 
 .card-title {
   font-size: 3vh;
+  padding: 1vh;
   font-weight: bold;
+  cursor: default;
 }
 
 .card-details {
   font-size: 2.5vh;
+  padding: 1vh;
+  cursor: default;
 }
 
 @media screen and (max-width: 600px) {
@@ -469,11 +465,9 @@ font-size: 10vh;
 
 #contact {
   background-color: #000000;
-  margin-top: 5vh;
   padding: 5vh;
   font-size: 2.5vh;
-  position: relative;
-  top: 10vh;
+  margin-top: 5vh;
 }
   
 #contact span {
@@ -494,7 +488,7 @@ font-size: 10vh;
 /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/
 
 #about-navbar {
-  background-color: #222222;
+  background-color: #111111;
   position: fixed;
   top: 0;
   width: 100%;
@@ -610,7 +604,41 @@ font-size: 10vh;
   font-size: 3vh;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 875px) {
+  .collapsible {
+    cursor: pointer;
+    padding: 2vw 0;
+    width: 96vw;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 2.75vw;
+    margin-top: 1vw;
+  }
+  
+  .content {
+    padding: 0 1vw;
+    width: 96vw;
+    max-height: 0;
+  }
+  
+  .content p {
+    padding: 2.5vw;
+    font-size: 2.5vw;
+  }
+
+  @-webkit-keyframes collapsible {
+    from {width: 0}
+    to {width: 96vw}
+  }
+    
+  @keyframes collapsible {
+    from {width: 0}
+    to {width: 96vw}
+  }
+}
+
+@media screen and (max-width: 500px) {
   .collapsible {
     cursor: pointer;
     padding: 2vh 0;
@@ -621,7 +649,11 @@ font-size: 10vh;
     font-size: 3.5vw;
     margin-top: 1vw;
   }
-  
+
+  .collapsible span {
+    margin-left: 2vh;
+  }
+
   .content {
     padding: 0 1vw;
     width: 96vw;
