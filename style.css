@@ -142,21 +142,7 @@ color: white;
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-}
-
-.bg-overlay {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: ' ';
-  z-index: 0;
-  backface-visibility: hidden;
-  background: #000000;
-  background: linear-gradient(rgba(0,0,0,0) -50%, rgba(0,0,0,1) 100%);
+  background-color: #000000;
 }
 
 #video-slides video {
@@ -166,8 +152,7 @@ color: white;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: #000000;
-  z-index: -1;
+  opacity: 0.65;
 }
 
 .text {
@@ -370,36 +355,6 @@ right: 0vh;
 font-size: 10vh;
 }
 
-#glimpse {
-  margin-top: 3vw;
-  transition: 1s;
-}
-
-#glimpse a {
-  text-decoration: none;
-  color: #000000;
-}
-
-#glimpse span {
-  margin-left: 3vw;
-  font-size: 5.33vh;
-  padding: 2vh;
-  border: 3px solid #000000;
-}
-
-#glimpse span:hover {
-  color: #5566ff;
-  border-color: #5566ff;
-  transition: 0.2s;
-}
-
-@media screen and (max-width: 500px) {
-  #glimpse span {
-    font-size: 5vw;
-    padding: 1.67vw;
-  }
-}
-
 .cards {
   display: flex;
   flex-direction: row;
@@ -433,6 +388,24 @@ font-size: 10vh;
   cursor: default;
 }
 
+#watch180r {
+  text-decoration: none;
+  color: #000000;
+  font-size: 4vh;
+  border: 2px solid #000000;
+  margin: 2.5vw 2.5vw;
+  width: fit-content;
+  height: fit-content;
+  padding: 2vh;
+  display: block;
+}
+
+#watch180r:hover {
+  color: #5566ff;
+  border: 2px solid #5566ff;
+  transition: 0.25s;
+}
+
 @media screen and (max-width: 600px) {
   .cards {
     flex-flow: row wrap;
@@ -457,6 +430,11 @@ font-size: 10vh;
   
   .card-details {
     font-size: 2.5vw;
+  }
+
+  #watch180r {
+    font-size: 4vw;
+    margin: 2.5vw 3.5vw;
   }
 }
 
@@ -487,36 +465,40 @@ font-size: 10vh;
     font-size: 2.5vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
-}
 
-#contact {
-  background-color: #000000;
-  padding: 5vh;
-  font-size: 2.5vh;
-  margin-top: 5vh;
-}
-  
-#contact span {
-  color: #acacac;
-}
-  
-#contact p {
-  color: white;
-}
-
-@media screen and (max-width: 600px) {
-  #contact {
-    padding: 5vw;
-    font-size: 3.5vw;
+  #watch180r {
+    font-size: 4vw;
+    margin: 2.5vw 5vw;
   }
 }
 
+#contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 3vw;
+  padding: 3vw 10vw;
+  background-color: #000000;
+}
+
+#contact > div {
+  width: fit-content;
+  max-width: 30vw;
+  color: #ffffff;
+  font-size: 2.5vh;
+  padding: 0 5vw;
+}
+
+#contact > div span {
+  color: #bbbbbb;
+}
 /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/
 
 #about-navbar {
   background-color: #111111;
   position: fixed;
   top: 0;
+  z-index: 1;
   width: 100%;
   display: block;
   animation-name: about-navbar;
@@ -556,15 +538,15 @@ font-size: 10vh;
 }
 
 #about180r {
-  position: relative;
+  position: absolute;
   top: 11vh;
   padding: 2vw;
-  width: 100vw;
+  width: fit-content;
   height: fit-content;
 }
 
 .collapsible {
-  background-color: #3d3d3d;
+  background-color: #111111;
   color: white;
   cursor: pointer;
   padding: 2vh 0;
@@ -579,7 +561,7 @@ font-size: 10vh;
 }
 
 .active, .collapsible:hover {
-  background-color: #202020;
+  background-color: #000000;
 }
 
 .content {
@@ -588,7 +570,7 @@ font-size: 10vh;
   width: 65vw;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
+  background-color: #f3f3f3;
   animation-name: collapsible;
 }
 
