@@ -9,9 +9,9 @@ function scrollFunction() {
     document.getElementById("mobile-navbar").style.backgroundColor = "transparent";
   }
   if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-    document.getElementById("glimpse").style.opacity = "1";
+    document.getElementById("cards").style.opacity = "1";
   } else {
-    document.getElementById("glimpse").style.opacity = "0";
+    document.getElementById("cards").style.opacity = "0";
   }
 }
 

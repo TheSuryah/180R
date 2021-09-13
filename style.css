@@ -180,8 +180,9 @@ animation-duration: 1s;
 }
 
 .register {
-  color: #f2f2f2;
-  background-color: #00b344;
+  color: black;
+  background-color: transparent;
+  border: 2px solid black;
   width: 20vw;
   font-weight: bold;
   padding: 1.67vh 0;
@@ -195,6 +196,13 @@ animation-duration: 1s;
   animation-duration: 1.5s;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.register:hover {
+  color: #ffffff;
+  background-color: #00b344;
+  border-color: transparent;
+  transition: 0.25s;
 }
 
 @-webkit-keyframes text {
@@ -218,13 +226,13 @@ to {font-size: 2.5vw; opacity: 1;}
 }
 
 @-webkit-keyframes register {
-  from {width: 0;}
-  to {width: 20vw;}
+  from {width: 0;opacity: 0;}
+  to {width: 20vw;opacity: 1;}
 }
   
 @keyframes register {
-  from {width: 0;}
-  to {width: 20vw;}
+  from {width: 0;opacity: 0;}
+  to {width: 20vw;opacity: 1;}
 }
 
 @-webkit-keyframes navbar {
@@ -274,13 +282,13 @@ to {top: 0; opacity: 1;}
   }
 
   @-webkit-keyframes register {
-    from {width: 0;}
-    to {width: 30vw;}
+    from {width: 0; opacity: 0;}
+    to {width: 30vw; opacity: 1;}
   }
     
   @keyframes register {
-    from {width: 0;}
-    to {width: 30vw;}
+    from {width: 0; opacity: 0;}
+    to {width: 30vw; opacity: 1;}
   }
 }
 
@@ -355,15 +363,16 @@ right: 0vh;
 font-size: 10vh;
 }
 
-.cards {
+#cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 1.5vw;
   margin-left: 1.5vw;
+  transition: 1s;
 }
 
-.cards > div {
+#cards > div {
   background-color: #ffffff;
   width: 22vw;
   margin: 1vw;
@@ -401,17 +410,18 @@ font-size: 10vh;
 }
 
 #watch180r:hover {
-  color: #5566ff;
-  border: 2px solid #5566ff;
+  color: #ffffff;
+  background-color: #5566ff;
+  border: 2px solid #ffffff;
   transition: 0.25s;
 }
 
 @media screen and (max-width: 600px) {
-  .cards {
+  #cards {
     flex-flow: row wrap;
   }
   
-  .cards > div {
+  #cards > div {
     width: 45vw;
     text-align: center;
     font-size: 2vw;
@@ -439,11 +449,11 @@ font-size: 10vh;
 }
 
 @media screen and (max-width: 365px) {
-  .cards {
+  #cards {
     flex-flow: column;
   }
   
-  .cards > div {
+  #cards > div {
     width: 90vw;
     text-align: center;
     font-size: 2vw;
