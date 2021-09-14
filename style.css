@@ -295,27 +295,27 @@ to {top: 0; opacity: 1;}
 }
 
 @media screen and (max-width: 1200px) {
-#mobile-navbar {
-  display: block;
-}
-#navbar {
-  display: none;
-}
-#menu {
-  display: block;
-}
+  #mobile-navbar {
+    display: block;
+  }
+  #navbar {
+    display: none;
+  }
+  #menu {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-#mobile-navbar {
-  display: none;
-}
-#navbar {
-  display: block;
-}
-#menu {
-  display: none;
-}
+  #mobile-navbar {
+    display: none;
+  }
+  #navbar {
+    display: block;
+  }
+  #menu {
+    display: none;
+  }
 }
 
 .overlay {
@@ -344,7 +344,7 @@ margin-right: 2vh;
 text-align: center;
 }
 
-.overlay a {
+.overlay-content a {
 padding: 3vh;
 text-decoration: none;
 font-size: 3.5vh;
@@ -360,9 +360,40 @@ color: #5566ff;
 
 .overlay .closebtn {
 position: absolute;
-top: 0vh;
-right: 0vh;
+top: 1vh;
+right: 1vh;
+padding: 1vh;
 font-size: 10vh;
+text-decoration: none;
+color: white;
+}
+
+#cea {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  left: 1.5vw;
+}
+
+#cea img {
+  height: 8vw;
+  width: auto;
+  float: left;
+  display: inline;
+}
+
+#iitm {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  right: 1.5vw;
+}
+
+#iitm img {
+  height: 8vw;
+  width: auto;
+  float: right;
+  display: inline;
 }
 
 #cards {
@@ -418,7 +449,17 @@ font-size: 10vh;
   transition: 0.25s;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
+  #cea img {
+    width: 15vw;
+    height: auto;
+  }
+  
+  #iitm img {
+    width: 15vw;
+    height: auto;
+  }
+  
   #cards {
     flex-flow: row wrap;
   }
@@ -451,6 +492,16 @@ font-size: 10vh;
 }
 
 @media screen and (max-width: 365px) {
+  #cea img {
+    width: 15vw;
+    height: auto;
+  }
+  
+  #iitm img {
+    width: 15vw;
+    height: auto;
+  }
+  
   #cards {
     flex-flow: column;
   }
