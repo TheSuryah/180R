@@ -8,11 +8,6 @@ function scrollFunction() {
     document.getElementById("navbar").style.backgroundColor = "transparent";
     document.getElementById("mobile-navbar").style.backgroundColor = "transparent";
   }
-  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-    document.getElementById("cards").style.opacity = "1";
-  } else {
-    document.getElementById("cards").style.opacity = "0";
-  }
 }
 
 function openMenu() {
