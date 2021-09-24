@@ -409,7 +409,22 @@ color: white;
   background-color: #ffffff;
   width: 22vw;
   margin: 1vw;
+  box-shadow: 0 0 4px #000000;
+}
+
+#cards > div:hover {
   box-shadow: 0 0 8px #000000;
+  transition: 0.25s;
+}
+
+#cards > div > a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#cards > div > a:hover {
+  color: #2d2dff;
+  transition: 0.25s;
 }
 
 .thumbnail {
@@ -419,15 +434,13 @@ color: white;
 
 .card-title {
   font-size: 3vh;
-  padding: 1vh;
+  padding: 2vh;
   font-weight: bold;
-  cursor: default;
 }
 
 .card-details {
   font-size: 2.5vh;
-  padding: 1vh;
-  cursor: default;
+  padding: 2vh;
 }
 
 #watch180r {
@@ -469,7 +482,6 @@ color: white;
     text-align: center;
     font-size: 2vw;
     margin: 2vw;
-    box-shadow: 0 0 4px #000000;
   }
 
   .thumbnail {
@@ -511,7 +523,6 @@ color: white;
     text-align: center;
     font-size: 2vw;
     margin: 4vw;
-    box-shadow: 0 0 4px #000000;
   }
 
   .thumbnail {
@@ -576,199 +587,5 @@ color: white;
 
   #contact > div p {
     margin-top: 2vw;
-  }
-}
-
-/*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/ /*ABOUT PAGE*/
-
-#about-navbar {
-  background-color: #111111;
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  display: block;
-  animation-name: about-navbar;
-  animation-duration: 1s;
-}
-
-@media screen and (max-width: 1200px) {
-  #about-navbar {
-    display: none;
-  }
-}
-
-#about-navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 4.125vh 1.265vw;
-  text-decoration: none;
-  font-size: 1.547vw;
-}
-
-#about-navbar img {
-  height: 11vh;
-  float: left;
-  margin-left: 8vh;
-}
-
-#about-navbar p {
-  font-size: 6vh;
-  float: left;
-  color: white;
-  padding: 0%;
-  margin-right: 4.5vw;
-  position: relative;
-  top: 2.5vh;
-}
-
-#about180r {
-  position: absolute;
-  top: 11vh;
-  padding: 2vw;
-  width: fit-content;
-  height: fit-content;
-}
-
-.collapsible {
-  background-color: #111111;
-  color: white;
-  cursor: pointer;
-  padding: 2vh 0;
-  width: 65vw;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 4vh;
-  margin-top: 1vh;
-  white-space: nowrap;
-  animation-name: collapsible;
-}
-
-.active, .collapsible:hover {
-  background-color: #000000;
-}
-
-.content {
-  padding: 0 1vh;
-  max-height: 0;
-  width: 65vw;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #f3f3f3;
-  animation-name: collapsible;
-}
-
-.collapsible span {
-  margin-left: 2vw;
-  animation-name: about-content;
-}
-
-@-webkit-keyframes about-navbar {
-  from {top: -12vh;}
-  to {top: 0;}
-}
-  
-@keyframes about-navbar {
-  from {top: -12vh;}
-  to {top: 0;}
-}
-
-@-webkit-keyframes collapsible {
-  from {width: 0}
-  to {width: 65vw}
-}
-  
-@keyframes collapsible {
-  from {width: 0}
-  to {width: 65vw}
-}
-
-@-webkit-keyframes about-content {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes about-content {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-.content p {
-  padding: 3vh;
-  font-size: 3vh;
-}
-
-@media screen and (max-width: 875px) {
-  .collapsible {
-    cursor: pointer;
-    padding: 2vw 0;
-    width: 96vw;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 2.75vw;
-    margin-top: 1vw;
-  }
-  
-  .content {
-    padding: 0 1vw;
-    width: 96vw;
-    max-height: 0;
-  }
-  
-  .content p {
-    padding: 2.5vw;
-    font-size: 2.5vw;
-  }
-
-  @-webkit-keyframes collapsible {
-    from {width: 0}
-    to {width: 96vw}
-  }
-    
-  @keyframes collapsible {
-    from {width: 0}
-    to {width: 96vw}
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .collapsible {
-    cursor: pointer;
-    padding: 2vh 0;
-    width: 96vw;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 3.5vw;
-    margin-top: 1vw;
-  }
-
-  .collapsible span {
-    margin-left: 2vh;
-  }
-
-  .content {
-    padding: 0 1vw;
-    width: 96vw;
-    max-height: 0;
-  }
-  
-  .content p {
-    padding: 3vw;
-    font-size: 3.5vw;
-  }
-
-  @-webkit-keyframes collapsible {
-    from {width: 0}
-    to {width: 96vw}
-  }
-    
-  @keyframes collapsible {
-    from {width: 0}
-    to {width: 96vw}
   }
 }
